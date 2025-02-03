@@ -44,7 +44,7 @@ const corsConfig = {
     app.use("/api", checkoutRoute);
 
     app.get("*", (req, res) => {
-      return res.send("Invalid route");
+      return res.send("This is the backend server");
     });
 
     app.listen(PORT, () => {
