@@ -1,7 +1,7 @@
 const express = require("express");
 const { login, signup, logout } = require("../controllers/user.controller");
 const { signupValidationRules } = require("../validators/request.validator");
-const { upload } = require("../multer/multermiddleware");
+const { upload } = require("../multer/multerMiddleware");
 
 const route = express.Router();
 
