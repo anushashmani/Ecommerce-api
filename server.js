@@ -43,8 +43,13 @@ const corsConfig = {
     app.use("/api", cartRoute);
     app.use("/api", checkoutRoute);
 
-    app.get("*", (req, res) => {
-      return res.send("This is the backend server");
+    app.get("/", (req, res) => {
+      const obj = {
+        name: "Ecommerce Api",
+        getReqTime: `Date: ${new Date().toDateString()}, Time: ${new Date().toLocaleTimeString()}`,
+      };
+      res.send(obj);
+      console.log("GET request received");
     });
 
     app.listen(PORT, () => {
